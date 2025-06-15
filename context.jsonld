@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "linkedlang": "https://linkedlang.org/ns#",
+    "id": "@id",
+    "type": "@type",
+    "value": "@value",
+    "Code": "linkedlang:Code",
+    "Number": "linkedlang:Number",
+    "String": "linkedlang:String",
+    "Boolean": "linkedlang:Boolean",
+    "Variable": "linkedlang:Variable",
+    "Add": "linkedlang:Add",
+    "Sub": "linkedlang:Sub",
+    "Mul": "linkedlang:Mul",
+    "Div": "linkedlang:Div",
+    "Mod": "linkedlang:Mod",
+    "And": "linkedlang:And",
+    "Or": "linkedlang:Or",
+    "Not": "linkedlang:Not",
+    "Equal": "linkedlang:Equal",
+    "LessThan": "linkedlang:LessThan",
+    "Bind": "linkedlang:Bind",
+    "Input": "linkedlang:Input",
+    "Output": "linkedlang:Output",
+    "If": "linkedlang:If",
+    "While": "linkedlang:While",
+    "content": "linkedlang:content",
+    "else": "linkedlang:else",
+    "lop": {
+      "id": "linkedlang:lop",
+      "type": "Variable"
+    },
+    "rop": {
+      "id": "linkedlang:rop",
+      "type": "Variable"
+    },
+    "object": {
+      "id": "linkedlang:object",
+      "type": "Variable"
+    },
+    "origin": {
+      "id": "linkedlang:origin",
+      "type": "Variable"
+    },
+    "target": {
+      "id": "linkedlang:target",
+      "type": "Variable"
+    },
+    "condition": {
+      "id": "linkedlang:condition",
+      "type": "Variable"
+    }
+  }
+}
