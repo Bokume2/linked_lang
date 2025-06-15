@@ -27,28 +27,28 @@
     "content": "linkedlang:content",
     "else": "linkedlang:else",
     "lop": {
-      "id": "linkedlang:lop",
-      "type": "Variable"
+      "@id": "linkedlang:lop",
+      "@type": "Variable"
     },
     "rop": {
-      "id": "linkedlang:rop",
-      "type": "Variable"
+      "@id": "linkedlang:rop",
+      "@type": "Variable"
     },
     "object": {
-      "id": "linkedlang:object",
-      "type": "Variable"
+      "@id": "linkedlang:object",
+      "@type": "Variable"
     },
     "origin": {
-      "id": "linkedlang:origin",
-      "type": "Variable"
+      "@id": "linkedlang:origin",
+      "@type": "Variable"
     },
     "target": {
-      "id": "linkedlang:target",
-      "type": "Variable"
+      "@id": "linkedlang:target",
+      "@type": "Variable"
     },
     "condition": {
-      "id": "linkedlang:condition",
-      "type": "Variable"
+      "@id": "linkedlang:condition",
+      "@type": "Variable"
     }
   }
 }
