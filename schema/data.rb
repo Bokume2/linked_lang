@@ -33,10 +33,6 @@ module LinkedLang
     def initialize(value)
       super(
         case value
-        when "true"
-          true
-        when "false"
-          false
         when true
           true
         when false
