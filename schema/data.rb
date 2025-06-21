@@ -1,5 +1,7 @@
+require_relative "base_types"
+
 module LinkedLang
-  class Data
+  class Data < Function
     def initialize(value)
       @value = value
     end
