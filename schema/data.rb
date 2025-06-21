@@ -4,7 +4,7 @@ module LinkedLang
       @value = value
     end
 
-    def exec(machineContext)
+    def eval(machineContext)
       @value
     end
 
