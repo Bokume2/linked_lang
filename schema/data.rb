@@ -7,7 +7,7 @@ module LinkedLang
     end
 
     def eval(machineContext)
-      @value
+      self
     end
 
     attr_reader :value
