@@ -15,18 +15,14 @@ module LinkedLang
 
   class Number < Data
     def initialize(value)
-      unless value.is_a?(Integer) || value.is_a?(Float)
-        raise ArgumentError
-      end
+      raise ArgumentError unless value.is_a?(Integer) || value.is_a?(Float)
       super value
     end
   end
 
   class String < Data
     def initialize(value)
-      unless value.is_a?(::String)
-        raise ArgumentError
-      end
+      raise ArgumentError unless value.is_a?(::String)
       super value
     end
   end
