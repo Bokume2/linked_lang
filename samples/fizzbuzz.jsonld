@@ -1,0 +1,149 @@
+{
+  "type": "Code",
+  "content": [
+    {
+      "type": "Input",
+      "target": "n",
+      "format": "number"
+    },
+    {
+      "type": "Bind",
+      "origin": {
+        "type": "Number",
+        "value": 0
+      },
+      "target": "i"
+    },
+    {
+      "type": "While",
+      "condition": {
+        "type": "LessThan",
+        "lop": "i",
+        "rop": "n"
+      },
+      "then": {
+        "type": "Code",
+        "content": [
+          {
+            "type": "Bind",
+            "origin": {
+              "type": "Add",
+              "lop": "i",
+              "rop": {
+                "type": "Number",
+                "value": 1
+              }
+            },
+            "target": "i"
+          },
+          {
+            "type": "If",
+            "condition": {
+              "type": "Equal",
+              "lop": {
+                "type": "Mod",
+                "lop": "i",
+                "rop": {
+                  "type": "Number",
+                  "value": 15
+                }
+              },
+              "rop": {
+                "type": "Number",
+                "value": 0
+              }
+            },
+            "then": {
+              "type": "Code",
+              "content": {
+                "type": "Output",
+                "object": {
+                  "type": "String",
+                  "value": "FizzBuzz\n"
+                }
+              }
+            },
+            "else": {
+              "type": "Code",
+              "content": {
+                "type": "If",
+                "condition": {
+                  "type": "Equal",
+                  "lop": {
+                    "type": "Mod",
+                    "lop": "i",
+                    "rop": {
+                      "type": "Number",
+                      "value": 3
+                    }
+                  },
+                  "rop": {
+                    "type": "Number",
+                    "value": 0
+                  }
+                },
+                "then": {
+                  "type": "Code",
+                  "content": {
+                    "type": "Output",
+                    "object": {
+                      "type": "String",
+                      "value": "Fizz\n"
+                    }
+                  }
+                },
+                "else": {
+                  "type": "Code",
+                  "content": {
+                    "type": "If",
+                    "condition": {
+                      "type": "Equal",
+                      "lop": {
+                        "type": "Mod",
+                        "lop": "i",
+                        "rop": {
+                          "type": "Number",
+                          "value": 5
+                        }
+                      },
+                      "rop": {
+                        "type": "Number",
+                        "value": 0
+                      }
+                    },
+                    "then": {
+                      "type": "Code",
+                      "content": {
+                        "type": "Output",
+                        "object": {
+                          "type": "String",
+                          "value": "Buzz\n"
+                        }
+                      }
+                    },
+                    "else": {
+                      "type": "Code",
+                      "content": [
+                        {
+                          "type": "Output",
+                          "object": "i"
+                        },
+                        {
+                          "type": "Output",
+                          "object": {
+                            "type": "String",
+                            "value": "\n"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
