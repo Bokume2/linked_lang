@@ -8,6 +8,7 @@ require_relative "schema/variable"
 require_relative "schema/arithmetic"
 require_relative "schema/logical"
 require_relative "schema/comparation"
+require_relative "schema/bind"
 require_relative "schema/io"
 
 class Hash
