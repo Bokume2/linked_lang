@@ -9,7 +9,7 @@ module LinkedLang
     end
 
     def exec(machineContext)
-      machineContext.set_variable @target.name, @origin
+      machineContext.set_variable @target.name, @origin.eval(machineContext)
     end
 
     def self.properties
