@@ -19,6 +19,8 @@
     "Not": "linkedlang:Not",
     "Equal": "linkedlang:Equal",
     "LessThan": "linkedlang:LessThan",
+    "NumberToString": "linkedlang:NumberToString",
+    "StringToNumber": "linkedlang:StringToNumber",
     "Bind": "linkedlang:Bind",
     "Input": "linkedlang:Input",
     "Output": "linkedlang:Output",
