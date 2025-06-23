@@ -1,17 +1,7 @@
-require_relative "base_types"
+require_relative "binary_operation"
 
 module LinkedLang
-  class BinaryOperation < Function
-    def initialize(lop:, rop:)
-      raise ArgumentError unless lop.is_a?(Function) && rop.is_a?(Function)
-      @lop = lop
-      @rop = rop
-    end
-
-    def self.properties
-      {"lop" => Function, "rop" => Function}
-    end
-
+  class BinaryArithmeticOperation < BinaryOperation
     protected
 
     def evalWithBlock(machineContext, &block)
@@ -21,31 +11,31 @@ module LinkedLang
     end
   end
 
-  class Add < BinaryOperation
+  class Add < BinaryArithmeticOperation
     def eval(machineContext)
       evalWithBlock(machineContext) {|l, r| l + r}
     end
   end
 
-  class Sub < BinaryOperation
+  class Sub < BinaryArithmeticOperation
     def eval(machineContext)
       evalWithBlock(machineContext) {|l, r| l - r}
     end
   end
 
-  class Mul < BinaryOperation
+  class Mul < BinaryArithmeticOperation
     def eval(machineContext)
       evalWithBlock(machineContext) {|l, r| l * r}
     end
   end
 
-  class Div < BinaryOperation
+  class Div < BinaryArithmeticOperation
     def eval(machineContext)
       evalWithBlock(machineContext) {|l, r| l / r}
     end
   end
 
-  class Mod < BinaryOperation
+  class Mod < BinaryArithmeticOperation
     def eval(machineContext)
       evalWithBlock(machineContext) {|l, r| l % r}
     end
