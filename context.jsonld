@@ -25,6 +25,7 @@
     "If": "linkedlang:If",
     "While": "linkedlang:While",
     "content": "linkedlang:content",
+    "format": "linkedlang:format",
     "else": "linkedlang:else",
     "lop": {
       "@id": "linkedlang:lop",
