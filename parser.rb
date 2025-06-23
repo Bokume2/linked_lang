@@ -5,6 +5,7 @@ require_relative "schema/base_types"
 require_relative "schema/code"
 require_relative "schema/data"
 require_relative "schema/variable"
+require_relative "schema/arithmetic"
 require_relative "schema/io"
 
 class Hash
