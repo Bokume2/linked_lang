@@ -1,7 +1,7 @@
 require_relative "base_types"
 
 module LinkedLang
-  class Cnversion < Function
+  class Conversion < Function
     def initialize(object:)
       raise ArgumentError unless object.is_a?(Function)
       @object = object
