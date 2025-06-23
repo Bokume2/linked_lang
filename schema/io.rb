@@ -7,7 +7,7 @@ module LinkedLang
     end
 
     def exec(machineContext)
-      puts @object.eval(machineContext).value
+      print @object.eval(machineContext).value
     end
 
     def self.properties
