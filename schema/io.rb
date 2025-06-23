@@ -16,20 +16,12 @@ module LinkedLang
   end
 
   class Input < Instruction
-    def initialize(target:, format:)
+    def initialize(target:)
       @target = target
-      @format = format
     end
 
     def exec(machineContext)
-      machineContext.set_variable(@target.name,
-        case @format
-        when "number"
-          Number.new($stdin.gets.to_i)
-        when "string"
-          String.new($stdin.gets.chomp)
-        end
-      ) 
+      machineContext.set_variable(@target.name, String.new($stdin.gets.chomp)) 
     end
 
     def self.properties

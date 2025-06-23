@@ -3,8 +3,15 @@
   "content": [
     {
       "type": "Input",
-      "target": "n",
-      "format": "number"
+      "target": "n"
+    },
+    {
+      "type": "Bind",
+      "origin": {
+        "type": "StringToNumber",
+        "object": "n"
+      },
+      "target": "n"
     },
     {
       "type": "Bind",
