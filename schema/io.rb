@@ -16,13 +16,13 @@ module LinkedLang
   end
 
   class Input < Instruction
-    def initialize(object:, format:)
-      @object = object
+    def initialize(target:, format:)
+      @target = target
       @format = format
     end
 
     def exec(machineContext)
-      machineContext.set_variable(@object.value,
+      machineContext.set_variable(@target.name,
         case @format
         when "number"
           gets.to_i
@@ -33,7 +33,7 @@ module LinkedLang
     end
 
     def self.properties
-      {"object" => Variable, "format" => ::String}
+      {"target" => Variable, "format" => ::String}
     end
   end
 end
