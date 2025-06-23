@@ -14,15 +14,17 @@ module LinkedLang
 
   class NumberToString < Conversion
     def eval(machineContext)
-      raise TypeError unless @object.is_a?(Number)
-      String.new(@object.value.to_s)
+      actual_object = @object.eval(machineContext)
+      raise TypeError unless actual_object.is_a?(Number)
+      String.new(actual_object.value.to_s)
     end
   end
 
   class StringToNumber < Conversion
     def eval(machineContext)
-      raise TypeError unless @object.is_a?(String)
-      Number.new(@object.value.to_i)
+      actual_object = @object.eval(machineContext)
+      raise TypeError unless actual_object.is_a?(String)
+      Number.new(actual_object.value.to_i)
     end
   end
 end
