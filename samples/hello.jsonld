@@ -1,0 +1,10 @@
+{
+  "type": "Code",
+  "content": {
+    "type": "Output",
+    "object": {
+      "type": "String",
+      "value": "Hello Linked World!"
+    }
+  }
+}
