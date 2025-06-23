@@ -4,7 +4,7 @@
     "type": "Output",
     "object": {
       "type": "String",
-      "value": "Hello Linked World!"
+      "value": "Hello Linked World!\n"
     }
   }
 }
