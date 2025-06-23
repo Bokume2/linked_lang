@@ -25,9 +25,9 @@ module LinkedLang
       machineContext.set_variable(@target.name,
         case @format
         when "number"
-          gets.to_i
+          Number.new($stdin.gets.to_i)
         when "string"
-          gets.chomp
+          String.new($stdin.gets.chomp)
         end
       ) 
     end
