@@ -10,6 +10,7 @@ require_relative "schema/logical"
 require_relative "schema/comparation"
 require_relative "schema/bind"
 require_relative "schema/io"
+require_relative "schema/control"
 
 class Hash
   def ll_type
@@ -101,7 +102,12 @@ module LinkedLang
         raw_properties = hash.ll_properties
         properties = {}
         type.properties.each do |key, type|
-          properties[key.to_sym] = parse_something(raw_properties[key], type)
+          properties[key.to_sym] = parse_something(raw_properties[key], type) if raw_properties.keys.include?(key)
+        end
+        if type < ControlStatement
+          properties[:_then] = properties[:then]
+          properties[:_else] = properties[:else] if properties.keys.include?(:else)
+          properties.delete(:then); properties.delete(:else)
         end
         type.new(**properties)
       end
