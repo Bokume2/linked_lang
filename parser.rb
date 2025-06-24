@@ -70,9 +70,6 @@ module LinkedLang
         elsif type <= Instruction || type <= Function
           raise TypeError unless hash.ll_type <= type
           parse_statement hash
-        elsif !hash.is_a?(Hash)
-          raise TypeError unless hash.is_a?(type)
-          hash
         end
       end
 
