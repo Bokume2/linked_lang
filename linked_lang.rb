@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require_relative "parser"
 require_relative "machine_context"
 
