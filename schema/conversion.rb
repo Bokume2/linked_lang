@@ -2,9 +2,9 @@ require_relative "base_types"
 
 module LinkedLang
   class Conversion < Function
-    def initialize(object:)
-      raise ArgumentError unless object.is_a?(Function)
-      @object = object
+    def initialize(_object:)
+      raise ArgumentError unless _object.is_a?(Function)
+      @object = _object
     end
 
     def self.properties

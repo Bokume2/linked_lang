@@ -4,10 +4,10 @@ module LinkedLang
   class ControlStatement < Instruction; end
 
   class If < ControlStatement
-    def initialize(condition:, _then:, _else: Code.new([]))
+    def initialize(_condition:, _then:, _else: Code.new([]))
       _else = Code.new([]) if _else.nil?
-      raise ArgumentError unless condition.is_a?(Function) && _then.is_a?(Code) && _else.is_a?(Code)
-      @condition = condition
+      raise ArgumentError unless _condition.is_a?(Function) && _then.is_a?(Code) && _else.is_a?(Code)
+      @condition = _condition
       @then = _then
       @else = _else
     end
@@ -28,9 +28,9 @@ module LinkedLang
   end
 
   class While < ControlStatement
-    def initialize(condition:, _then:)
-      raise ArgumentError unless condition.is_a?(Function) && _then.is_a?(Code)
-      @condition = condition
+    def initialize(_condition:, _then:)
+      raise ArgumentError unless _condition.is_a?(Function) && _then.is_a?(Code)
+      @condition = _condition
       @then = _then
     end
 

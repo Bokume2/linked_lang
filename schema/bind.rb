@@ -2,10 +2,10 @@ require_relative "base_types"
 
 module LinkedLang
   class Bind < Instruction
-    def initialize(origin:, target:)
-      raise ArgumentError unless origin.is_a?(Function) && target.is_a?(Variable)
-      @origin = origin
-      @target = target
+    def initialize(_origin:, _target:)
+      raise ArgumentError unless _origin.is_a?(Function) && _target.is_a?(Variable)
+      @origin = _origin
+      @target = _target
     end
 
     def exec(machineContext)

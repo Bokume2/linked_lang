@@ -2,8 +2,8 @@ require_relative "base_types"
 
 module LinkedLang
   class Output < Instruction
-    def initialize(object:)
-      @object = object
+    def initialize(_object:)
+      @object = _object
     end
 
     def exec(machineContext)
@@ -16,8 +16,8 @@ module LinkedLang
   end
 
   class Input < Instruction
-    def initialize(target:)
-      @target = target
+    def initialize(_target:)
+      @target = _target
     end
 
     def exec(machineContext)
