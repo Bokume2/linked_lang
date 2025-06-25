@@ -15,8 +15,12 @@ require_relative "schema/control"
 
 class Hash
   def ll_type
-    if self[LinkedLang::TYPE_KEY]&.start_with?(LinkedLang::LL_NAMESPACE)
-      eval("LinkedLang::" + self[LinkedLang::TYPE_KEY].delete_prefix(LinkedLang::LL_NAMESPACE))
+    type = self[LinkedLang::TYPE_KEY]
+    type.filter!{|i| i.start_with?(LinkedLang::LL_NAMESPACE)} if type.is_a?(Array)
+    raise TypeError unless type.is_a?(String) || type.length <= 1
+    type = type[0] if type.is_a?(Array)
+    if type&.start_with?(LinkedLang::LL_NAMESPACE)
+      eval("LinkedLang::" + type.delete_prefix(LinkedLang::LL_NAMESPACE))
     end
   end
 
