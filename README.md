@@ -33,6 +33,9 @@ Shebangを解釈可能なシェルであれば、以下のように直接実行�
 ./linked_lang.rb <source-file>
 ```
 
+## Syntax
+Linked LangおよびJSON-LD実装の構文や仕様については、docsディレクトリ内の[syntax.md](docs/syntax.md)および[node_types.md](docs/node_types.md)を参照して下さい。
+
 ## Samples
 - `hello.jsonld`  
   いわゆるHello Worldです。実行すると`Hello Linked World!`の文字列が改行付きで出力されます。  
