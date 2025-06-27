@@ -1,0 +1,10 @@
+{
+  "@type": "https://linkedlang.org/ns#Code",
+  "https://linkedlang.org/ns#content": {
+    "@type": "https://linkedlang.org/ns#Output",
+    "https://linkedlang.org/ns#object": {
+      "@type": "https://linkedlang.org/ns#String",
+      "@value": "Hello Linked World!\n"
+    }
+  }
+}

@@ -37,9 +37,11 @@ Shebangを解釈可能なシェルであれば、以下のように直接実行�
 Linked LangおよびJSON-LD実装の構文や仕様については、docsディレクトリ内の[syntax.md](docs/syntax.md)および[node_types.md](docs/node_types.md)を参照して下さい。
 
 ## Samples
-- `hello.jsonld`  
+- [`hello.jsonld`](samples/hello.jsonld)  
   いわゆるHello Worldです。実行すると`Hello Linked World!`の文字列が改行付きで出力されます。  
-- `fizzbuzz.jsonld`  
+- [`hello_verbose.jsonld`](samples/hello_verbose.jsonld)  
+  `hello.jsonld`と等価なプログラムですが、contextを利用せずIRIやJSON-LDキーワードを省略無しで記述しています。  
+- [`fizzbuzz.jsonld`](samples/fizzbuzz.jsonld)  
   FizzBuzzです。最初に標準入力から整数を受け取り、その数までのFizzBuzzを出力します。
 
 ## Contact
