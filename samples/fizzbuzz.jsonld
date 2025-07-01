@@ -2,6 +2,13 @@
   "type": "Code",
   "content": [
     {
+      "type": "Output",
+      "object": {
+        "type": "String",
+        "value": "Input a number: "
+      }
+    },
+    {
       "type": "Input",
       "target": "n"
     },
