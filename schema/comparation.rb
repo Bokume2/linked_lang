@@ -1,7 +1,7 @@
 require_relative "binary_operation"
 
 module LinkedLang
-  class ComparationOperation < BinaryLogicalOperation
+  class ComparationOperation < BinaryOperation
     protected
 
     def evalWithBlock(machineContext, cls, &block)
