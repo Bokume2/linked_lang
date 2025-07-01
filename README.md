@@ -24,14 +24,19 @@
      ```
 
 ## Usage
-Linked Langのソースコードをテキストファイルに記述し、ソースファイルのパスを渡して`linked_lang.rb`を実行します。  
+Linked Langのソースコードをテキストファイルに記述し、ソースファイルのパスを渡して[`linked_lang`](linked_lang)を実行します。  
 ```bash
-ruby linked_lang.rb <source-file>
+./linked_lang <source-file>
 ```
-Shebangを解釈可能なシェルであれば、以下のように直接実行することも可能です。  
-```bash
-./linked_lang.rb <source-file>
-```
+シェルスクリプトが利用できない環境では、明示的にRuby処理系を使用して[`linked_lang.rb`](linked_lang.rb)を実行して下さい。 
+- bundlerを利用しない場合 
+  ```bash
+  ruby linked_lang.rb <source-file>
+  ```
+- bundlerを利用する場合
+  ```bash
+  bundle exec ruby linked_lang.rb <source-file>
+  ```
 
 ## Syntax
 Linked LangおよびJSON-LD実装の構文や仕様については、docsディレクトリ内の[syntax.md](docs/syntax.md)および[node_types.md](docs/node_types.md)を参照して下さい。

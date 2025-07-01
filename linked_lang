@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if type bundle > /dev/null; then
+    bundle exec ruby ./linked_lang.rb $1
+else
+    ruby ./linked_lang.rb $1
+fi
