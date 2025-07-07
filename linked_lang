@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if bundle check 2>&1 > /dev/null; then
+if bundle check > /dev/null 2>&1; then
     bundle exec ruby ./linked_lang.rb $1
 else
     ruby ./linked_lang.rb $1
