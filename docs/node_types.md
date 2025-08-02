@@ -187,7 +187,7 @@
 |命令|`condition`, `then`, `else`*|
 
 条件分岐です。  
-`condition`は`Boolean`の値を返す関数、then`, `else`はコードブロックです。  
+`condition`は`Boolean`の値を返す関数、`then`, `else`はコードブロックです。  
 実行すると{condition}の値が`true`であれば`then`を、`false`であれば`else`を実行します。  
 `else`は省略可能です。省略した場合、{condition}の値が`false`のときには実行しても何もしません。
 
@@ -197,5 +197,5 @@
 |命令|`condition`, `then`|
 
 繰り返し処理です。  
-`condition`は`Boolean`の値を返す関数、then`はコードブロックです。  
+`condition`は`Boolean`の値を返す関数、`then`はコードブロックです。  
 実行すると{condition}の値が`true`である間、繰り返し`then`を実行します。`condition`の評価タイミングは`then`の実行直前です。
