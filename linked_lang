@@ -1,9 +1,9 @@
 #!/bin/sh
 
-cd "$(dirname "$0")"
+LINKED_LANG_SCRIPT="$(dirname "$0")/linked_lang.rb"
 
 if bundle check > /dev/null 2>&1; then
-    bundle exec ruby ./linked_lang.rb $1
+    bundle exec ruby "$LINKED_LANG_SCRIPT" "$1"
 else
-    ruby ./linked_lang.rb $1
+    ruby "$LINKED_LANG_SCRIPT" "$1"
 fi
